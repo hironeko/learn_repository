@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "commonjs",
+    "noImplicitAny": true, //暗黙のanyを許容しない
+    "target": "es5",
+    "jsx": "react",
+    "lib": ["es5", "es6", "es7", "es2018", "dom"],
+    "moduleResolution": "node" // node_modulesから参照
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
+}
