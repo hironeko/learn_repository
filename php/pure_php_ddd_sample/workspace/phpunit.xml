@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpunit>
+    <php>
+        <env name="DB_DSN" value="mysql:dbname=todo_test;host=mysql"/>
+        <env name="DB_USER" value="default"/>
+        <env name="DB_PASSWORD" value="secret"/>
+        <env name="DB_NAME" value="todo_test"/>
+    </php>
+</phpunit>
