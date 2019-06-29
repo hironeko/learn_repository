@@ -8,6 +8,16 @@ module.exports = {
       lang: "ja"
     }
   },
+  // themeConfig: {
+  //   sidebar: [
+  //     "/",
+  //     {
+  //       title: "About",
+  //       collapsable: false,
+  //       chirdren: ["About"]
+  //     }
+  //   ]
+  // },
   meta: [
     { charset: "utf-8" },
     { name: "viewport", content: "witdth=device-with, initial-scale=1" }
