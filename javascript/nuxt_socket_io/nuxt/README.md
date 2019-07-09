@@ -4,7 +4,7 @@
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
@@ -20,3 +20,5 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+thnx [Nuxt.js (Vue.js) + Express + Socket.IO でリアルタイム Web (チャット) を体験する](https://qiita.com/rema424/items/c1ef92625ecaf4421e6f)
