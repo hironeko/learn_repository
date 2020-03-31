@@ -9,5 +9,5 @@ jobs:
       uses: actions/checkout@v2
     - name: check
       run: |
-      ls -al
-      git status
+        ls -al
+        git status
