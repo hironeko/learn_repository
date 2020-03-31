@@ -1,0 +1,32 @@
+{
+  "name": "ts-nuxt-sample",
+  "version": "1.0.0",
+  "description": "My spectacular Nuxt.js project",
+  "author": "hironeko",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@nuxt/types": "^0.3.2",
+    "@nuxt/typescript-build": "^0.3.2",
+    "@nuxt/typescript-runtime": "^0.2.2",
+    "@vue/composition-api": "^0.3.2",
+    "cross-env": "^5.2.0",
+    "element-ui": "^2.4.11",
+    "express": "^4.16.4",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-jest": "^24.1.0",
+    "babel-preset-vca-jsx": "^0.3.2",
+    "jest": "^24.1.0",
+    "nodemon": "^1.18.9",
+    "vue-jest": "^4.0.0-0"
+  }
+}
