@@ -7,4 +7,4 @@ jobs:
     steps:
     - name: Create Pull Request
     #   uses: actions/checkout@v2
-      run: git status
+      run: ls -al
