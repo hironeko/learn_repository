@@ -2,9 +2,9 @@ name: Auto Create Pull Request
 on: push
 
 jobs:
-    runs-on: ubuntu-latest
-
-    steps:
-        - name: Create Pull Request
-        - use: actions/checkout@v2
-          run: git status
+    test_gihubactions:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Create Pull Request
+            - use: actions/checkout@v2
+            run: git status
