@@ -5,6 +5,6 @@ jobs:
     test_gihubactions:
         runs-on: ubuntu-latest
         steps:
-            - name: Create Pull Request
-            - uses: actions/checkout@v2
-              run: git status
+        - name: Create Pull Request
+        - uses: actions/checkout@v2
+        run: git status
