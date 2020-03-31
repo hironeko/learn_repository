@@ -1,22 +1,29 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Models;
 
-use PDO;
-
+/**
+ * Sample class
+ */
 class Sample extends BaseModel
 {
-    private $pdo;
-
+    /**
+     * constructor function
+     */
     public function __construct()
     {
         parent::__construct();
     }
 
-    public function get()
+    /**
+     * レコード数を取得
+     *
+     * @return int
+     */
+    public function fetchCount()
     {
         $stmt = $this->pdo->query('select * from todos');
-        // die(var_dump($stmt));
 
         return $stmt->rowCount();
     }

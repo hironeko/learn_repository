@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Models;
 
@@ -22,19 +23,13 @@ class BaseModel
 
     /**
      * PDO接続
-     * 
-     * @return void
      */
     private function connectDatabase()
     {
         try {
-            $this->pdo = new PDO(
-                $_ENV['DB_DSN'],
-                $_ENV['DB_USER'],
-                $_ENV['DB_PASSWORD']
-            );
+            // PDOの処理
         } catch (PDOException $pdoException) {
-            throw $pdoException;
+            // exceptionをcatch
         }
     }
 }
