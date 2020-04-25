@@ -3,12 +3,15 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import Head from "next/head"
 
+const name = 'hironeko'
+export const siteTitle = 'Next.js Sample Website'
+
 export default function Layout({ children, home }) {
   // return <div className={styles.container}>{children}</div>
   return (
     <div className={styles.container}>
       <Head>
-        <Link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
           content="Lear how to build a personal website using  Next.js"
