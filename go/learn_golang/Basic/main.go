@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	. "math"
+)
 
 func plus(x, y int) int {
 	return x + y
@@ -62,4 +65,5 @@ func main() {
 
 	otherInts := integers()
 	fmt.Println(otherInts()) // 1 → ints()の値は共有されない
+	fmt.Println(Pi)          // . "package name" にすると省略ができる
 }
