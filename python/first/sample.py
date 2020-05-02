@@ -48,3 +48,36 @@ def out():
 
 
 out()  # 関数の中の関数です
+
+
+# クロージャ
+
+def outDef(arg):
+    def inDef():
+        return 'name :' + arg
+    return inDef
+
+
+f = outDef('taro')
+s = outDef('sakurako')
+print(f())  # name :taro
+print(s())  # name :sakurako
+
+
+# lamda関数
+
+def sum_number(num1, num2): return num1 + num2
+
+
+print('sum : ', sum_number(3, 4))  # sum : 7
+
+
+# 空のクラス
+class Hoge:
+    pass
+
+
+hoge = Hoge()
+hoge.fuga = 'yattttaaaa'
+
+print(hoge.fuga)  # yattttaaaa
