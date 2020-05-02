@@ -67,6 +67,7 @@ print(s())  # name :sakurako
 # lamda関数
 
 def sum_number(num1, num2): return num1 + num2
+# sum_number = lambda num1, num2: num1 + num2
 
 
 print('sum : ', sum_number(3, 4))  # sum : 7
