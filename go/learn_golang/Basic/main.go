@@ -50,7 +50,16 @@ func ifSyntax() string {
 	return "Xのが大きよ"
 }
 
+func mixXY() string {
+	x, y := 3, 5
+	if n := x * y; n%2 == 0 {
+		return "偶数だよ"
+	}
+	return "奇数だよ"
+}
+
 func main() {
+	fmt.Println(mixXY())
 	// r := plusAlias(10, 5)
 
 	// fmt.Println(r)
@@ -72,5 +81,5 @@ func main() {
 	// otherInts := integers()
 	// fmt.Println(otherInts()) // 1 → ints()の値は共有されない
 	// fmt.Println(Pi)          // . "package name" にすると省略ができる
-	fmt.Println(ifSyntax())
+	// fmt.Println(ifSyntax())
 }
