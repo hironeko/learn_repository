@@ -14,17 +14,16 @@ func b() {
 	var n, m int
 	fmt.Scanf("%d %d", &n, &m)
 	v := make([]int, n)
+	r := 0
 	for i := range v {
 		fmt.Scan(&v[i])
+		r += v[i]
 	}
 
 	// 降順でソートをする
 	sort.Sort(sort.Reverse(sort.IntSlice(v)))
-	r := 0
-	for _, i := range v {
-		r = r + i
-	}
-	if v[m-1] > (r / (m * 4)) {
+
+	if v[m-1] > int(r/(m*4)) {
 		fmt.Println("Yes")
 	} else {
 		fmt.Println("No")
