@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	. "math"
 )
 
 func plus(x, y int) int {
@@ -44,26 +43,34 @@ func integers() func() int {
 	}
 }
 
+func ifSyntax() string {
+	if x, y := 1, 2; x < y {
+		return "Yが大きよ"
+	}
+	return "Xのが大きよ"
+}
+
 func main() {
-	r := plusAlias(10, 5)
+	// r := plusAlias(10, 5)
 
-	fmt.Println(r)
-	f := returnFunc()
-	f()
-	inFunc(func() {
-		fmt.Println("in func")
-	})
+	// fmt.Println(r)
+	// f := returnFunc()
+	// f()
+	// inFunc(func() {
+	// 	fmt.Println("in func")
+	// })
 
-	l := later()
-	fmt.Println(l("Golang"))
-	fmt.Println(l("is"))
-	fmt.Println(l("awesome!!"))
+	// l := later()
+	// fmt.Println(l("Golang"))
+	// fmt.Println(l("is"))
+	// fmt.Println(l("awesome!!"))
 
-	ints := integers()
-	fmt.Println(ints()) // 1
-	fmt.Println(ints()) // 2
+	// ints := integers()
+	// fmt.Println(ints()) // 1
+	// fmt.Println(ints()) // 2
 
-	otherInts := integers()
-	fmt.Println(otherInts()) // 1 → ints()の値は共有されない
-	fmt.Println(Pi)          // . "package name" にすると省略ができる
+	// otherInts := integers()
+	// fmt.Println(otherInts()) // 1 → ints()の値は共有されない
+	// fmt.Println(Pi)          // . "package name" にすると省略ができる
+	fmt.Println(ifSyntax())
 }
