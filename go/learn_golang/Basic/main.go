@@ -2,7 +2,105 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
+
+func main() {
+	// fmt.Println(mixXY())
+	// r := plusAlias(10, 5)
+
+	// fmt.Println(r)
+	// f := returnFunc()
+	// f()
+	// inFunc(func() {
+	// 	fmt.Println("in func")
+	// })
+
+	// l := later()
+	// fmt.Println(l("Golang"))
+	// fmt.Println(l("is"))
+	// fmt.Println(l("awesome!!"))
+
+	// ints := integers()
+	// fmt.Println(ints()) // 1
+	// fmt.Println(ints()) // 2
+
+	// otherInts := integers()
+	// fmt.Println(otherInts()) // 1 → ints()の値は共有されない
+	// fmt.Println(Pi)          // . "package name" にすると省略ができる
+	// fmt.Println(ifSyntax())
+	// forMaxCount100()
+	// forRange()
+	// switchBasic()
+	atCoder()
+}
+
+func atCoder() {
+
+	var n, m int
+	fmt.Scanf("%d %d", &n, &m)
+	v := make([]int, n)
+	r := 0
+	for i := range v {
+		fmt.Println(i)
+		fmt.Scan(&v[i])
+	}
+	sort.Sort(sort.Reverse(sort.IntSlice(v)))
+	for _, i := range v {
+		r = r + i
+	}
+	fmt.Println(v[1-1])
+	l := r / (m * 4)
+	var a string
+	if v[m-1] > l {
+		a = "Yes"
+	} else {
+		a = "No"
+	}
+	fmt.Println(a)
+}
+
+func switchBasic() {
+	n := 3
+	switch n {
+	case 1, 2:
+		fmt.Println(" 1 or 2")
+	case 3:
+		fmt.Println("3 です")
+	default:
+		fmt.Println("unknown")
+	}
+}
+
+func forRange() {
+	f := [3]string{"apple", "banana", "cherry"}
+
+	for i, s := range f {
+		fmt.Printf("%d : %s\n", i, s)
+	}
+}
+
+func forBasic() {
+	for i := 0; i < 10; i++ {
+		if i%2 == 0 {
+			fmt.Println("yatta")
+		}
+		fmt.Println(i)
+		i++
+	}
+}
+
+func forMaxCount100() {
+	i := 0
+	for {
+		fmt.Println(i)
+		i++
+		if i == 100 {
+			fmt.Println("終わり")
+			break
+		}
+	}
+}
 
 func plus(x, y int) int {
 	return x + y
@@ -56,30 +154,4 @@ func mixXY() string {
 		return "偶数だよ"
 	}
 	return "奇数だよ"
-}
-
-func main() {
-	fmt.Println(mixXY())
-	// r := plusAlias(10, 5)
-
-	// fmt.Println(r)
-	// f := returnFunc()
-	// f()
-	// inFunc(func() {
-	// 	fmt.Println("in func")
-	// })
-
-	// l := later()
-	// fmt.Println(l("Golang"))
-	// fmt.Println(l("is"))
-	// fmt.Println(l("awesome!!"))
-
-	// ints := integers()
-	// fmt.Println(ints()) // 1
-	// fmt.Println(ints()) // 2
-
-	// otherInts := integers()
-	// fmt.Println(otherInts()) // 1 → ints()の値は共有されない
-	// fmt.Println(Pi)          // . "package name" にすると省略ができる
-	// fmt.Println(ifSyntax())
 }
