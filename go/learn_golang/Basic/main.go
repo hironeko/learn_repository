@@ -2,8 +2,16 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 	"sort"
 )
+
+func init() {
+	// 実行される
+	// 他の言語の constructorと同じような挙動
+	// init 関数は、複数かけて順番は、上から順に実行される
+	fmt.Println("初期化")
+}
 
 func main() {
 	// fmt.Println(mixXY())
@@ -32,7 +40,52 @@ func main() {
 	// forMaxCount100()
 	// forRange()
 	// switchBasic()
-	atCoder()
+	// atCoder()
+	// exInterface()
+	// exGoto()
+	// exDefer()
+	checkRuntimePackage()
+}
+
+func checkRuntimePackage() {
+	// go routineについて知るため
+	go fmt.Println("yes")
+	fmt.Printf("CPU: %d\n", runtime.NumCPU())
+	fmt.Printf("Goroutine: %d\n", runtime.NumGoroutine()) // 並行処理を行っているから　2になる
+	fmt.Printf("Version: %s\n", runtime.Version())
+}
+
+func exDefer() {
+	// panic以前に書かれたdefer　は全て実行される
+	defer fmt.Println("最後に実行")
+	fmt.Println("最初に実行される")
+}
+
+func exGoto() {
+	fmt.Println("ジャンプ前")
+	goto L
+	fmt.Println("ここは表示されない")
+L:
+	fmt.Println("ジャンプ後")
+}
+
+func exInterface() {
+	var x interface{} = 3.14
+	// fmt.Scanf("%d", &x)
+	// i, isInt := x.(int) // i == 0 , isInt == false
+	// f, isFloat64 := x.(float64) // i == 3.15 isFloat64 == true
+
+	if x == nil {
+		fmt.Println("nilです")
+	} else if i, isInt := x.(int); isInt {
+		// }else if _, isInt := x.(int); isInt { // i は使用しないので明示的に _ として省略することもできる
+		fmt.Println("整数 : %d", i)
+	} else if f, isFloat64 := x.(float64); isFloat64 {
+		fmt.Println("float : %d", f)
+	} else {
+		fmt.Println("それ以外")
+	}
+	// fmt.Println(f, isFloat64)
 }
 
 func atCoder() {
