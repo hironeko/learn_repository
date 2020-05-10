@@ -1,16 +1,38 @@
 package main
 
+// 第四章の学習：参照型
+// 第五章の学習：構造体とインターフェース
+
 import "fmt"
 
-// 第四章の学習：参照型
+// MyInt int の　alias
+type MyInt int
+
+// Callback func
+type Callback func(i int) int
 
 func main() {
 	// arrStandard()
-	fmt.Println(spreadArg(1, 3, 4, 1))
+	// fmt.Println(spreadArg(1, 3, 4, 1))
+	fmt.Println(exSum())
 }
 
-func exMap() {
+func sampleSum(ints []int, callback Callback) int {
+	var sum int
+	for _, i := range ints {
+		sum += i
+	}
+	return callback(sum)
+}
 
+func exSum() int {
+	n := sampleSum(
+		[]int{1, 2, 3, 4, 5},
+		func(i int) int {
+			return i * 2
+		},
+	)
+	return n
 }
 
 func spreadArg(s ...int) int {
