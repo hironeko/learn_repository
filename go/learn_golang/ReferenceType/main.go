@@ -5,11 +5,25 @@ import "fmt"
 // 第四章の学習：参照型
 
 func main() {
-	arrStandard()
+	// arrStandard()
+	fmt.Println(spreadArg(1, 3, 4, 1))
+}
+
+func exMap() {
+
+}
+
+func spreadArg(s ...int) int {
+	n := 0
+	for _, v := range s {
+		n += v
+	}
+	return n
+	//  s:= []int{1, 2, 3 }
+	// spreadArg(s...) スライスを可変長引数として展開ができる
 }
 
 // make は必ず第一引数に型をとる
-
 func arrStandard() {
 	// var s []int
 	// make で作るといかになる
