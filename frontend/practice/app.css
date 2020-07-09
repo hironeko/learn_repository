@@ -1,0 +1,28 @@
+/* body {
+  margin: auto;
+  width: 680px;
+} */
+
+/* gridの学習 */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  grid-template-rows: 200px 200px 200px;
+}
+
+/* flex の学習 */
+/* .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  height: 300px;
+} */
+
+.container > div {
+  background: #0bd;
+  color: #fff;
+  /* margin: 10px; */
+  padding: 10px;
+}
