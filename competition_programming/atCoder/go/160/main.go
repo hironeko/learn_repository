@@ -6,7 +6,9 @@ import (
 )
 
 func main() {
-	b()
+	var i int
+	fmt.Scan(&i)
+	fmt.Println(strings.Repeat("*", i))
 }
 
 func b() {
