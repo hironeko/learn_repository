@@ -36,6 +36,22 @@ $newCollection = $collection->every(function ($item) {
 });
 ```
 
+### migration
+
+```php
+// 外部キー制約：サンプル
+Schema::create('comments', function (Blueprint $table) {
+    $table->increments('id');
+    $table->unsignedInteger('post_id');
+
+    $table->foreign('post_id')->references('id')->on('posts');
+});
+
+$table->foreign('self_column_name')->references('制約先のcolumn_name')->on('制約のtable_name');
+// もし外部キー設定時に index 名がなげーよって時は以下でaliasをつける
+$table->foreign('self_column_name', 'another_index_name')->references('制約先のcolumn_name')->on('制約のtable_name');
+```
+
 
 ### testでつかうやつ
 
