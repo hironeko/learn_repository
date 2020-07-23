@@ -52,6 +52,28 @@ $table->foreign('self_column_name')->references('制約先のcolumn_name')->on('
 $table->foreign('self_column_name', 'another_index_name')->references('制約先のcolumn_name')->on('制約のtable_name');
 ```
 
+##＃Validation
+
+- formreequestとか
+
+```php
+
+public function rule()
+{
+    return [
+        'hoge_field' => [
+            'required',
+            Rule::in(
+                // 配列
+            ),
+            Rule::exists('table_name', 'column')->where(function($q) {
+                $q->where('is_archived', false);
+            })
+        ]
+    ]
+}
+
+```
 
 ### testでつかうやつ
 
