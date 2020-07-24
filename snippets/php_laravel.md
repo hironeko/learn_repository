@@ -92,3 +92,12 @@ $this->assertTrue($collection->ever(function ($item) => {
 ## CLIでテストを実行する際は以下のコマンドで @group でテストを実行可能
 $ ./vendor/bin/phpunit --group=group-name
 ```
+
+
+### vueであれこれ始める
+
+```
+$ composer require laravel/ui
+$ php artisan ui vue --auth
+$ yarn
+```

@@ -1,5 +1,0 @@
-## build
-
-```
-composer set-up
-```
