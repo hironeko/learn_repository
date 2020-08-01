@@ -1,6 +1,6 @@
 <template>
   <div>
-    Home!!!
+    Home!!!{{ hoge }}
     <div class="w-full max-w-xs">
       <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div class="mb-4">
@@ -8,7 +8,7 @@
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="username"
-            v-mode="name"
+            v-mode="formData.name"
             type="text"
             placeholder="Username"
           />
@@ -18,7 +18,7 @@
           <input
             class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
             id="password"
-            v-mode="password"
+            v-mode="formData.password"
             type="password"
             placeholder="******************"
           />
@@ -34,7 +34,7 @@
             href="#"
           >Forgot Password?</a>
         </div>
-      </form>d
+      </form>
     </div>
   </div>
 </template>
@@ -50,8 +50,13 @@ interface FormData {
 export default Vue.extend({
   data() {
     return {
-      formData: [] as FormData,
+      formData: {} as FormData,
     }
+  },
+  computed: {
+    hoge() {
+      return "けんしょう"
+    },
   },
 })
 </script>
