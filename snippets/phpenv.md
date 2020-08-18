@@ -40,7 +40,7 @@
 
 - 以下コマンド実行
 ```shell
-$ PHP_BUILD_CONFIGURE_OPTS="--with-libedit=$(brew --prefix libedit)" phpenv install 7.2.1
+$ PHP_BUILD_CONFIGURE_OPTS="--with-libedit=$(brew --prefix libedit)" phpenv install 7.2.x
 ```
 
 - phpenv で7.4.*系入れるときに必要
