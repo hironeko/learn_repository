@@ -1,6 +1,13 @@
 variable "name" {}
-variable "policy" {}
 variable "identifier" {}
+
+data "aws_iam_policy_document" "allow_describe_regions" {
+  statement {
+    effect    = "Allow"
+    actions   = ["ec2:DescribeRegions"]
+    resources = ["*"]
+  }
+}
 
 resource "aws_iam_role" "default" {
   name               = var.name
@@ -20,7 +27,7 @@ data "aws_iam_policy_document" "assume_role" {
 
 resource "aws_iam_policy" "default" {
   name   = var.name
-  policy = var.policy
+  policy = data.aws_iam_policy_document.assume_role.json
 }
 
 resource "aws_iam_role_policy_attachment" "default" {

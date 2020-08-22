@@ -1,3 +1,5 @@
-2020*/.terraform
-2020*/terraform.tfstate
-2020*/terraform.tfstate.backup
+practice/2020*/.terraform
+practice/2020*/terraform.tfstate
+practice/2020*/terraform.tfstate.backup
+
+.terraform
