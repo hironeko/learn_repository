@@ -10,10 +10,10 @@ resource "aws_lb" "example" {
     aws_subnet.public_1.id,
   ]
 
-  # access_logs {
-  #   bucket  = aws_s3_bucket.alb_log.id
-  #   enabled = true
-  # }
+  access_logs {
+    bucket  = aws_s3_bucket.alb_log.id
+    enabled = true
+  }
 
   security_groups = [
     module.http_sg.security_group_id,
