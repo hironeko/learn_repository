@@ -24,7 +24,13 @@ module "s3" {
 }
 
 module "alb" {
-  source = "./modules/alb"
+  source                             = "./modules/alb"
+  subnet_public0_id                  = module.network.subnet_public0_id
+  subnet_public1_id                  = module.network.subnet_public0_id
+  s3_alb_log_id                      = module.s3.s3_alb_log_id
+  http_sg_security_group_id          = module.http_sg.security_group_id
+  https_sg_security_group_id         = module.https_sg.security_group_id
+  http_redirect_sg_security_group_id = module.http_redirect_sg.security_group_id
 }
 
 module "http_sg" {
