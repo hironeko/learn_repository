@@ -1,0 +1,13 @@
+name: Auto Create Pull Request
+on: push
+
+jobs:
+  test_gihubactions:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: check
+      run: |
+        ls -al
+        git status
