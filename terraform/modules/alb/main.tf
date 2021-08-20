@@ -10,26 +10,19 @@ resource "aws_lb" "example" {
   load_balancer_type         = "application"
   internal                   = false
   idle_timeout               = 60
-  enable_deletion_protection = true
+  enable_deletion_protection = false
 
   subnets = [
-    # aws_subnet.public_0.id,
-    # aws_subnet.public_1.id,
-    # network.subnet_public0_id
     var.subnet_public0_id,
     var.subnet_public1_id
   ]
 
   access_logs {
-    #   # bucket  = aws_s3_bucket.alb_log.id
     bucket  = var.s3_alb_log_id
     enabled = true
   }
 
   security_groups = [
-    # module.http_sg.security_group_id,
-    # module.https_sg.security_group_id,
-    # module.http_redirect_sg.security_group_id,
     var.http_sg_security_group_id,
     var.https_sg_security_group_id,
     var.http_redirect_sg_security_group_id
