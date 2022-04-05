@@ -45,6 +45,8 @@ $ brew install zlib curl bzip libiconv libedit tidy-html5
 --with-tidy=/usr/local/opt/tidy-html5
 ```
 
+> M1になるとbrewのpathが変更されて、/opt/homebrew/binになる
+
 - 以下コマンド実行
 ```shell
 $ PHP_BUILD_CONFIGURE_OPTS="--with-libedit=$(brew --prefix libedit)" phpenv install 7.2.13
